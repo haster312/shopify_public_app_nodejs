@@ -35,14 +35,6 @@ class Dashboard extends Component {
                         </p>
                     }
                 </Card>
-                <Card title="Order Analytics" sectioned>
-                    {
-                        this.state.loading ? <SpinnerLoading /> :
-                        <p>
-                            Total Orders: { this.state.order.total }
-                        </p>
-                    }
-                </Card>
             </Page>
         )
     }

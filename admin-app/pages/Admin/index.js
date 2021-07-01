@@ -6,6 +6,7 @@ import {AppConfig} from "../../services/AppBridge";
 import translations from '@shopify/polaris/locales/en.json';
 import Styles from '@shopify/polaris/dist/styles.css';
 import '../../assets/css/responsive.scss';
+import '../../assets/css/app.scss'
 import Sidebar from '../../components/Navigation';
 import Router from '../../components/Router';
 import ShopRepo from '../../repositories/Shop';
@@ -29,7 +30,7 @@ class Admin extends Component {
                 <Provider config={AppConfig}>
                     <AppProvider i18n={translations}>
                         {
-                            this.state.loading ? <SpinnerLoading /> :
+                            this.state.loading ? <div className="loading-container"><SpinnerLoading /></div>:
                             <>
                                 <Sidebar/>
                                 <Router/>

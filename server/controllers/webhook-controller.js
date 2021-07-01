@@ -4,7 +4,7 @@ import Response from '../helpers/response';
 import Shop from "../models/shop";
 
 module.exports = () => {
-    router.post('/uninstalled', async (req, res) => {
+    router.post('/app/uninstalled', async (req, res) => {
         const body = req.body;
         const shop = await Shop.getOneByShopifyShopId(body.id);
         if (shop) {
